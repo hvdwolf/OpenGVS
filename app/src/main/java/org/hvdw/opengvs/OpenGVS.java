@@ -12,7 +12,7 @@ import android.content.ComponentName;
 import android.widget.Toast;
 
 public class OpenGVS extends Activity {
-    public static final String TAG = "OpenGVSApp";
+    public static final String TAG = "OpenGVS";
     private static PackageManager pm;
     private static Context mContext;
 
@@ -22,7 +22,7 @@ public class OpenGVS extends Activity {
         super.onCreate(savedInstanceState);
         mContext = getApplicationContext();
 
-        Log.d(TAG, "Started OpenGVSApp; in OnCreate void");
+        Log.d(TAG, "Started OpenGVS; in OnCreate void");
 
         /*Intent sIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         try {
@@ -36,8 +36,14 @@ public class OpenGVS extends Activity {
         sIntent.addCategory(Intent.CATEGORY_LAUNCHER);
         sIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mContext.startActivity(sIntent);
+    
+        //startActivity(new Intent(Intent.ACTION_VOICE_COMMAND).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+        /*Intent sIntent = new Intent(Intent.ACTION_VOICE_COMMAND);
+        sIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        mContext.startActivity(sIntent); */
+        
 
-        Log.d(TAG, "Switch On WiFi");
+        //Log.d(TAG, "Open Google Search in voicesearch mode");
 
         finish();
     }
